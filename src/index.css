@@ -1,0 +1,17 @@
+:root{
+  --img-size: 100px;
+}
+header{
+  width: 100vw;
+  height: 15vh;
+  background-color: crimson;
+  display: flex;
+}
+header img{
+  height: var(--img-size);
+  margin: 0;
+  align-self: center;
+}
+.red{
+  --img-size: 75px;
+}
