@@ -1,29 +1,37 @@
+import { useContext } from "react"
+import { Context } from "../../../context/Context"
+
 export default function Themes(){
+    const {darkLogo,setDarkLogo,toggleLogo} = useContext(Context)
+    // const lightThemeClass = darkLogo ? "":"none"
+    // const darkThemeClass = !darkLogo ? "":"none"
     return(
         <div className="themes">
-            <form>
-                <label htmlFor="light"></label>
-                <input name="light" type="radio" id="red" defaultChecked />
-                <label htmlFor="light"></label>
-                <input name="light" type="radio" id="blue" />
-                <label htmlFor="light"></label>
-                <input name="light" type="radio" id="green" />
-                <label htmlFor="light"></label>
-                <input name="light" type="radio" id="yellow" />
-                <label htmlFor="light"></label>
-                <input name="light" type="radio" id="pink" />
-            </form>
-            <form>
-                <label htmlFor="dark"></label>
-                <input checked name="dark" type="radio" />
-                <label htmlFor="dark"></label>
-                <input name="dark" type="radio" />
-                <label htmlFor="dark"></label>
-                <input name="dark" type="radio" />
-                <label htmlFor="dark"></label>
-                <input name="dark" type="radio" />
-                <label htmlFor="dark"></label>
-                <input name="dark" type="radio" />
+            <form >
+                <div>
+                    <label htmlFor="theme"></label>
+                    <input name="theme" type="radio" id="red" defaultChecked />
+                    <label htmlFor="theme"></label>
+                    <input name="theme" type="radio" id="blue" />
+                    <label htmlFor="theme"></label>
+                    <input name="theme" type="radio" id="green" />
+                    <label htmlFor="theme"></label>
+                    <input name="theme" type="radio" id="yellow" />
+                    <label htmlFor="theme"></label>
+                    <input name="theme" type="radio" id="pink" />
+                    <label htmlFor="theme"></label>
+                </div>
+                <div>
+                    <input name="theme" type="radio" id="dark-red"/>
+                    <label htmlFor="theme"></label>
+                    <input name="theme" type="radio" id="dark-blue"/>
+                    <label htmlFor="theme"></label>
+                    <input name="theme" type="radio" id="dark-green"/>
+                    <label htmlFor="theme"></label>
+                    <input name="theme" type="radio" id="dark-yellow"/>
+                    <label htmlFor="theme"></label>
+                    <input name="theme" type="radio" id="dark-pink"/>
+                </div>
             </form>
         </div>
     )

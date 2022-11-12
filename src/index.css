@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
   --img-size: 100px;
 }
@@ -30,23 +30,30 @@ header .logo{
   outline-offset: 2px;
 }
 .themes{
-  display: flex;
+  display: none;
   width: fit-content;
-  flex-direction: column;
   position: absolute;
   top: 0;
   left: 50%;
   right: 50%;
-  transform: translateX(-2.5rem);
+  transform: translateX(-2.75rem);
+  background-color: whitesmoke;
+  padding: 0.5rem;
 }
 .themes form{
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.themes form div{
+  display: flex;
+  
 }
 .themes form input[type="radio"]{
   appearance: none;
   height: 1rem;
   width: 1rem;
-  outline: 2px solid var(--radio-color );
+  outline: 2px solid var(--radio-color);
   outline-offset: 2px;
   border-radius: 50%;
 }
@@ -68,12 +75,36 @@ header .logo{
 .themes form input[type="radio"]#pink{
   --radio-color: palevioletred;
 }
-:root:has(#red:checked){
-  --img-size:75px;
+.themes form input[type="radio"]#dark-red{
+  --radio-color: crimson;
 }
+.themes form input[type="radio"]#dark-blue{
+  --radio-color: navy;
+}
+.themes form input[type="radio"]#dark-green{
+  --radio-color: darkgreen;
+}
+.themes form input[type="radio"]#dark-yellow{
+  --radio-color: rgb(255, 208, 0);
+}
+.themes form input[type="radio"]#dark-pink{
+  --radio-color: rgb(209, 55, 106);
+}
+/* :root:has(#red:checked){
+  
+} */
+
 nav{
   display: flex;
   gap: 1rem;
+}
+nav a{
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 .sidebar{
   position: absolute;

@@ -1,9 +1,11 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useContext} from "react";
 import Sidebar from "./Sidebar";
 import Themes from "./Themes";
 import Navbar from "./Navbar";
+import { Context } from "../../../context/Context";
 
 export default function Header(){
+    const {darkLogo,setDarkLogo,toggleLogo} = useContext(Context)
     const [windowWidth,setWindowWidth] = useState(window.innerWidth)
     useEffect(()=>{
         function watchWidth(){
@@ -15,6 +17,7 @@ export default function Header(){
         }
     })
     
+    
     const [sidebar,setSidebar] = useState(false)
     const hamburgerIcon = sidebar ? "ri-close-line ri-2x" : "ri-menu-line ri-2x"
     const navbar = windowWidth >= 640 ? <Navbar/> : <i className={hamburgerIcon} onClick={()=>setSidebar(!sidebar)}></i>
@@ -25,7 +28,10 @@ export default function Header(){
                 C
             </div>
             <Themes/>
-            {navbar}
+            <div className="navbar">
+                {navbar}
+            </div>
+            
             
         </header>
         {sidebar && <Sidebar/>}
