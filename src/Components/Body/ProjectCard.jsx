@@ -1,13 +1,14 @@
-export default function ProjectCard(){
+export default function ProjectCard(props){
+    const {image,id,github,deployed} = props
     return(
         <>
-            <div className="project-card">
-                <div>
-                    <img src="" alt="" />
+            <div key={id} className="project-card">
+                <div className="project-image">
+                    <img src={image} alt="image" />
                 </div>
                 <div>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href={github}>GitHub</a>
+                    <a href={deployed}>Deployed</a>
                 </div>
             </div>
         </>
