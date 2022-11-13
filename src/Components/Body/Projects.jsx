@@ -1,7 +1,8 @@
 import ProjectCard from "./ProjectCard"
-import data from "../../data/cardData"
+import cardData from "../../data/cardData"
+console.log(cardData)
 export default function Projects(){
-    const cards = data.map(e => (
+    const cards = cardData.map(e => (
         <ProjectCard
             {...e}
         />
