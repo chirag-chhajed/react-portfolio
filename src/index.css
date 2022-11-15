@@ -251,8 +251,6 @@ nav a{
   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 #contact{
-  padding-top: 15vh;
-  min-height: 100vh;
   background-color: azure;
 }
 

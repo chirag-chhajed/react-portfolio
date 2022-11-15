@@ -8,4 +8,3 @@ export default function Skills(props){
         </div>
     )
 }
-// import image from "../../../public/assets/HTML.png"

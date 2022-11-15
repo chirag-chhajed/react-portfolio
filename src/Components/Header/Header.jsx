@@ -2,10 +2,10 @@ import React,{useState,useEffect,useContext} from "react";
 import Sidebar from "./Sidebar";
 import Themes from "./Themes";
 import Navbar from "./Navbar";
-import { Context } from "../../../context/Context";
+// import { Context } from "../../../context/Context";
 
 export default function Header(){
-    const {darkLogo,setDarkLogo,toggleLogo} = useContext(Context)
+    // const {darkLogo,setDarkLogo,toggleLogo} = useContext(Context)
     const [windowWidth,setWindowWidth] = useState(window.innerWidth)
     useEffect(()=>{
         function watchWidth(){
